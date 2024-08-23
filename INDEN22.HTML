@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cuculetr</title>
+    <script>
+        function btnpress(x)
+        {
+          document.getElementById("t1").value += x;
+          
+        
+            
+        }
+        function cleardata()
+        {
+            document.getElementById("t1").value="";
+        }
+        function backpress()
+        {
+           var a =  document.getElementById("t1").value;
+            var b = a.length;
+            var c = a.substr(0, b-1);
+            document.getElementById("t1").value = c;
+        }
+        function result()
+        {
+var a = document.getElementById("t1").value;
+var b = eval(a);
+document.getElementById("t1").value = b;
+        }
+    </script>
+</head>
+<body bgcolor=""><center> 
+    <FONT color="black" size="9"> CALCULATOR </FONT><HR SIZR="6" COLOR="BLACK">
+    <table bgcolor="gray" border="">
+        <tr >
+            <td colspan="4"><input readonly id="t1" style="background-color: aquamarine;" width="300px" height="400px">  </td>
+        </tr>
+        <tr  >
+            <td width="10px"  > <button onclick="cleardata()" style="background-color: orange; border-radius: 50%;border-color: lavenderblush;">C</button></td>
+            <td width="10px" ><button onclick="backpress()"style="background-color: lightblue;">&larr;</button></td>
+            <td width="10px" ><button onclick="btnpress('%')"style="background-color: lightblue;">%</button></td>
+            <td width="10px"  ><button onclick="btnpress('/')" style="background-color: lightblue; width: 30px">/</button></td>
+        </tr>
+        <tr >
+            <td> <button onclick="btnpress('7')" style="border-radius: 50%; background: white;">7</button></td>
+            <td><button onclick="btnpress('8')"style="border-radius: 50%; background: white;">8</button></td>
+            <td><button onclick="btnpress('9')" style="border-radius: 50%;background: white">9</button></td>
+            <td ><button onclick="btnpress('*')" style="background-color: lightblue; width: 30px;">*</button></td>
+        </tr>
+        <tr>
+            <td> <button onclick="btnpress('4')"style="border-radius: 50%;">4</button></td>
+            <td><button onclick="btnpress('5')"style="border-radius: 50%; background: white;" >5</button></td>
+            <td><button onclick="btnpress('6')"style="border-radius: 50%;">6</button></td>
+            <td ><button onclick="btnpress('+')" style="background-color: lightblue;width: 30px">+</button></td>
+        </tr>
+        <tr>
+            <td> <button onclick="btnpress('1')"style="border-radius: 50%;background: white">1</button></td>
+            <td><button onclick="btnpress('2')" style="border-radius: 50%;background: white">2</button></td>
+            <td><button onclick="btnpress('3')"style="border-radius: 50%; background: white">3</button></td>
+            <td ><button onclick="btnpress('-')"style="background-color: lightblue; width: 30px">-</button></td>
+        </tr>
+        <tr>
+            <td> <button onclick="btnpress('0')"style="background-color: ; width: 30px">0</button></td>
+            <td><button onclick="btnpress('.')"style="background-color: ; width: 30px">.</button></td>
+            <td><button onclick="btnpress('00')"style="background-color:; width: 30px">00</button></td>
+            <td ><button onclick="result()" style="background-color: orange;width: 30px">=</button></td>
+        </tr>
+
+
+    </table></marquee>
+    </center>
+</body>
+</html>
